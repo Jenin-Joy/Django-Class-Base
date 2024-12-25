@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>#</td>
+            <td>District</td>
+            <td colspan="2">Action</td>
+        </tr>
+        {% for i in object_list %}
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{i.district_name}}</td>
+            <td><a href="{% url 'Admin:districtdeletelist' i.id %}">Delete</a></td>
+            <td><a href="{% url 'Admin:districteditlist' i.id %}">Edit</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
