@@ -1,5 +1,6 @@
 from django.contrib import admin
 from Admin.models import District,Category,Place
+from Guest.models import Shop
 # Register your models here.
 
 admin.site.register(District)
